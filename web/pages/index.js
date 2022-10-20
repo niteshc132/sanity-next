@@ -1,12 +1,10 @@
 import Link from "next/link";
+import { Suspense, useState } from "react";
 import groq from "groq";
 import client from "../client";
+import { InferGetStaticPropsType } from "next";
 
-const Index = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const [searchValue, setSearchValue] = useState('');
-  const filteredBlogPosts = posts.filter((post) =>
-    post.title.toLowerCase().includes(searchValue.toLowerCase())) =>
-{
+const Index = ({ posts }) => {
   return (
     <div className="max-w-xl mx-auto bg-red-500">
       <h1 className="text-3xl font-bold underline">Welcome to a blog!</h1>
