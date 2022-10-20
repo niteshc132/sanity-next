@@ -40,8 +40,8 @@ const Post = ({
   content,
 }) => {
   return (
-    <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
-      <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-Black">
+    <article className="text-white flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
+      <h1 className="mb-4 text-3xl font-bold tracking-tight  md:text-5xl dark:text-Black">
         {title}
       </h1>
       <span>By {name}</span>
@@ -54,7 +54,7 @@ const Post = ({
         </ul>
       )}
       {authorImage && (
-        <div>
+        <div className="rounded-full">
           <img
             src={urlFor(authorImage).width(80).url()}
             alt={`${name}'s picture`}
