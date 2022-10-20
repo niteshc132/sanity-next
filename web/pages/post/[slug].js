@@ -10,7 +10,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeCodeTitles from "rehype-code-titles";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrism from "rehype-prism-plus";
-
+import Callout from "../../components/callout";
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
 }
@@ -62,7 +62,7 @@ const Post = ({
         </div>
       )}
       <div className="prose">
-        <MDXRemote {...content} />
+        <MDXRemote {...content} components={{ Callout }} />
       </div>
 
       {/* <PortableText value={body} components={ptComponents} /> */}
