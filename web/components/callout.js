@@ -8,7 +8,7 @@ export default function Callout({ children, title, description, imageId }) {
         borderRadius: "0.5rem",
       }}
     >
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <b>{description}</b>
       <img src={imageId} />
       {children}

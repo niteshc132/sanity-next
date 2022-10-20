@@ -65,7 +65,7 @@ const Post = ({
         <MDXRemote {...content} components={{ Callout }} />
       </div>
 
-      {/* <PortableText value={body} components={ptComponents} /> */}
+      {/* <PortableText value={content} components={ptComponents} /> */}
     </article>
   );
 };
